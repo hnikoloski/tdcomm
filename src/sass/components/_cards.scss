@@ -1,0 +1,17 @@
+.product-card {
+  &__title {
+    font-size: 2.2rem;
+    line-height: 1.09;
+    margin-bottom: 3.8rem;
+    color: #000;
+  }
+  &__image-wrapper {
+    width: 100%;
+    height: 23.4rem;
+    margin-bottom: 2.2rem;
+    img {
+      @include fullSizeImg(cover);
+    }
+  }
+
+}

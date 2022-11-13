@@ -1,0 +1,13 @@
+footer.site-footer {
+  background: $secondary;
+  padding: 3rem 0;
+  p {
+    font-size: 1.2rem;
+    color: #adadad;
+    font-family: $ruda;
+    b {
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+body.home {
+  .intro-section {
+    padding: 7.9rem 1.5rem 10rem 1.5rem;
+    text-align: center;
+    .section-title {
+      margin-bottom: 7.7rem;
+    }
+    .section-description {
+      max-width: 77.1rem;
+      margin: 0 auto 9rem auto;
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .products-section {
+    max-width: 127.2rem;
+    margin: 0 auto 9.8rem auto;
+    .section-title {
+      margin-bottom: 6.8rem;
+    }
+    .posts-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .single-product {
+        flex: 0 0 38.2rem;
+        max-width: 38.2rem;
+        width: 38.2rem;
+      }
+    }
+  }
+}

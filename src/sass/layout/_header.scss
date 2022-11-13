@@ -1,0 +1,26 @@
+#masthead {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2.4rem 14.4rem;
+  background: $primary;
+  .logo-wrapper {
+    flex: 0 0 10rem;
+    width: 10rem;
+  }
+  nav {
+    #primary-menu {
+      display: flex;
+      li {
+        &:not(:last-of-type) {
+          margin-right: 1.5rem;
+        }
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

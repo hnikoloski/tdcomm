@@ -1,0 +1,18 @@
+.td-btn {
+  padding: 1.2rem 3.8rem;
+  @include borderRadius(0.5rem);
+  border: 0.2rem solid $accent;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-family: $ruda;
+  transition: 0.3s;
+  color: #fff;
+  display: inline-block;
+  &-primary {
+    color: $accent;
+    &:hover {
+      background: $accent;
+      color: #fff;
+    }
+  }
+}
