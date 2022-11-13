@@ -1,10 +1,10 @@
 {
-    "key": "group_637035470d631",
-    "title": "Footer Fields",
+    "key": "group_637033e51f0e2",
+    "title": "Theme General Settings",
     "fields": [
         {
-            "key": "field_6370354cbc5f0",
-            "label": "Copy Bar",
+            "key": "field_637034501fd49",
+            "label": "Head",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -19,11 +19,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_63703559bc5f1",
-            "label": "Copy bar text",
-            "name": "footer_copy_bar_text",
-            "type": "text",
-            "instructions": "This is the text at the very bottom of the website footer. You can use html as well as basic text.",
+            "key": "field_637033f81fd48",
+            "label": "Head tag",
+            "name": "head_tag",
+            "type": "textarea",
+            "instructions": "You can use this to include stuff that needs to be put in the <head> tag of the website like google analytics etc..",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -31,11 +31,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "© All rights reserved <b>tdcomm<\/b> - <span class=\"current-year\"><\/span>",
+            "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": 10,
+            "new_lines": ""
         }
     ],
     "location": [
@@ -43,7 +43,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-footer"
+                "value": "theme-general-settings"
             }
         ]
     ],
@@ -56,5 +56,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668311282
+    "modified": 1668311278
 }
