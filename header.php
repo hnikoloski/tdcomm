@@ -50,6 +50,7 @@
                 );
                 ?>
             </nav><!-- #site-navigation -->
-
-            <a href="#" class="td-btn td-btn-accent">Contact</a>
+            <?php if (get_field('contact_button_link_to', 'option')) : ?>
+                <a href="<?php the_field('contact_button_link_to', 'option'); ?>" class="td-btn td-btn-primary"><?php the_field('contact_button_text', 'option'); ?></a>
+            <?php endif; ?>
         </header><!-- #masthead -->

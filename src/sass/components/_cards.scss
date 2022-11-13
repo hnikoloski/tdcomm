@@ -13,5 +13,66 @@
       @include fullSizeImg(cover);
     }
   }
+}
 
+.industry-card {
+  display: flex;
+  &__image-wrapper {
+    flex: 0 0 63.3rem;
+    width: 63.3rem;
+    // height: 100%;
+    img {
+      display: block;
+      @include fullSizeImg(cover);
+    }
+  }
+  &__content-wrapper {
+    flex: 0 0 calc(100% - 63.3rem);
+    width: calc(100% - 63.3rem);
+    padding: 1.4rem 1.4rem 0 5.6rem;
+  }
+  &__title {
+    font-size: 2.2rem;
+    line-height: 1.09;
+    margin-bottom: 7.9rem;
+    color: #000;
+  }
+  &__excerpt {
+    font-size: 1.8rem;
+    line-height: 1.33;
+    margin-bottom: auto;
+  }
+  .td-btn {
+    margin-top: auto;
+  }
+}
+
+.blog-card {
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $primary;
+    line-height: 1.23;
+    margin-bottom: auto;
+  }
+  &__image-wrapper {
+    width: 100%;
+    height: 28.6rem;
+    margin-bottom: 3.6rem;
+    margin-top: 1.5rem;
+    img {
+      @include fullSizeImg(cover);
+    }
+  }
+  &__link {
+    color: $accent;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: $ruda;
+    display: block;
+    height: 1.5;
+    &:hover {
+      color: $primary;
+    }
+  }
 }

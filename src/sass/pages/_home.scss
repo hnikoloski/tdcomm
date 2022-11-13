@@ -30,4 +30,63 @@ body.home {
       }
     }
   }
+  .industries-section {
+    margin-bottom: 10rem;
+    .section-title {
+      margin-bottom: 4.8rem;
+    }
+    .swiper-industries {
+      width: 127.2rem;
+      margin: 0 auto;
+      .swiper-wrapper {
+        margin-bottom: 10rem;
+      }
+      .swiper-pagination {
+        .swiper-pagination-bullet {
+          width: 1.3rem;
+          height: 1.3rem;
+          background: none;
+          border: 0.2rem solid #14248a;
+          opacity: 1;
+          margin: 0;
+          &:not(:last-of-type) {
+            margin-right: 0.57rem;
+          }
+          &:hover {
+            background: rgba(20, 36, 138, 0.7);
+          }
+          &-active {
+            background: #14248a;
+          }
+        }
+      }
+    }
+  }
+  .our-blogs-section {
+    margin-bottom: 15rem;
+    .section-title {
+      margin-bottom: 7.3rem;
+    }
+    .posts-wrapper {
+      width: 115.4rem;
+      display: flex;
+      align-items: stretch;
+      align-content: stretch;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      .single-blog {
+        flex: 0 0 46.8rem;
+        width: 46.8rem;
+        height: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-end;
+        // .blog-card__title {
+        // min-height: 7.378rem;
+        // }
+      }
+    }
+  }
 }

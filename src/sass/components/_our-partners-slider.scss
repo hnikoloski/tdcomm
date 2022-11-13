@@ -1,0 +1,20 @@
+.our-partners-section {
+  margin-bottom: 8.3rem;
+  .section-title {
+    margin-bottom: 6.9rem;
+  }
+  .swiper-partners {
+    .swiper-wrapper {
+      .swiper-slide {
+        height: 10rem;
+        .img-wrapper {
+          height: 100%;
+          width: auto;
+          img {
+            @include fullSizeImg(contain);
+          }
+        }
+      }
+    }
+  }
+}

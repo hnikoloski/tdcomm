@@ -4,23 +4,61 @@
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 2.4rem 14.4rem;
+  padding: 3.2rem 48.4rem;
   background: $primary;
+  position: relative;
   .logo-wrapper {
-    flex: 0 0 10rem;
-    width: 10rem;
+    width: 17.3rem;
+    position: absolute;
+    @include ver-center();
+    left: 14.4rem;
   }
   nav {
     #primary-menu {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
       li {
-        &:not(:last-of-type) {
-          margin-right: 1.5rem;
-        }
-        a {
-          color: #fff;
+        &:not(.td-btn) {
+          &:not(:last-of-type) {
+            margin-right: 10rem;
+          }
+          a {
+            color: #fff;
+            font-size: 1.8rem;
+            line-height: 1.33;
+            position: relative;
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -0.5rem;
+              left: 0;
+              width: 100%;
+              height: 0.2rem;
+              background: $accent;
+              transition: 0.3s;
+              @include transform(scaleX(0));
+            }
+            &:hover {
+              &:after {
+                @include transform(scaleX(1));
+              }
+            }
+          }
         }
       }
+    }
+  }
+  .td-btn {
+    position: absolute;
+    @include ver-center();
+    right: 14.4rem;
+    color: #fff;
+    cursor: pointer;
+    a {
+      color: inherit;
     }
   }
 }
