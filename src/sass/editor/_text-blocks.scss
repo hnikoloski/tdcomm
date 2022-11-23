@@ -1,0 +1,60 @@
+.block-editor-block-list__layout {
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+  h4 {
+    font-size: 34px;
+  }
+  h5 {
+    font-size: 32px;
+  }
+  h6 {
+    font-size: 30px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  strong,
+  b {
+    font-weight: 600;
+  }
+
+  .has-td-blue-background-color {
+    background-color: $primary;
+  }
+  .has-td-orange-color {
+    color: $accent;
+  }
+  .has-td-blue-color {
+    color: $primary;
+  }
+  .has-td-white-color {
+    color: #fff;
+  }
+  .has-td-black-color {
+    color: #000;
+  }
+  .has-td-blue-border-color {
+    border-color: $primary;
+  }
+  .has-td-orange-border-color {
+    border-color: $accent;
+  }
+}

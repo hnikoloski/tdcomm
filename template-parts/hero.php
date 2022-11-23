@@ -35,4 +35,22 @@ if (is_front_page()) :
         <?php endif; ?>
     </div>
 <?php
-endif; //is_front_page
+//is_front_page
+else :
+    $pageId = get_the_ID();
+    $heroTitle = get_field('inner_hero_title', $pageId) ?: get_the_title();
+    $heroSubTitle = get_field('inner_hero_sub_title', $pageId);
+    $image = get_field('inner_hero_bg', $pageId) ?: '';
+?>
+
+    <div id="hero" class="hero-inner" style="--bgImg:url('<?= $image ?>');">
+        <div>
+
+            <h1><?= $heroTitle; ?></h1>
+            <?php if ($heroSubTitle) : ?>
+                <p><?= $heroSubTitle; ?></p>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php
+endif;

@@ -32,14 +32,19 @@ body.home {
   }
   .industries-section {
     margin-bottom: 10rem;
+
     .section-title {
       margin-bottom: 4.8rem;
     }
     .swiper-industries {
-      width: 127.2rem;
+      // width: 127.2rem;
+      width: 100%;
       margin: 0 auto;
       .swiper-wrapper {
         margin-bottom: 10rem;
+        .swiper-slide {
+          padding: 0 33.8rem;
+        }
       }
       .swiper-pagination {
         .swiper-pagination-bullet {

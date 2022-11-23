@@ -1,7 +1,7 @@
 <?php
 if (!defined('_S_VERSION')) {
     // Replace the version number of the theme on each release.
-    define('_S_VERSION', '1.0.0');
+    define('_S_VERSION', '1.0.1');
 }
 
 
@@ -15,7 +15,7 @@ if (!defined('_S_VERSION')) {
 
 if (!defined('_S_VERSION')) {
     // Replace the version number of the theme on each release.
-    define('_S_VERSION', '1.0.0');
+    define('_S_VERSION', '1.0.1');
 }
 
 if (!function_exists('starter_setup')) :
@@ -58,6 +58,9 @@ if (!function_exists('starter_setup')) :
         register_nav_menus(
             array(
                 'menu-1' => esc_html__('Primary', 'starter'),
+                'footer-1' => esc_html__('Footer-1', 'starter'),
+                'footer-2' => esc_html__('Footer-2', 'starter'),
+                'footer-3' => esc_html__('Footer-3', 'starter'),
             )
         );
 
@@ -185,24 +188,52 @@ if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Acf options Pages
+ */
 
-if (function_exists('acf_add_options_page')) {
+require get_template_directory() . '/inc/acf-options-pages.php';
 
-    acf_add_options_page(array(
-        'page_title'    => 'Theme General Settings',
-        'menu_title'    => 'Theme Settings',
-        'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Header Settings',
-        'menu_title'    => 'Header',
-        'parent_slug'   => 'theme-general-settings',
-    ));
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Footer Settings',
-        'menu_title'    => 'Footer',
-        'parent_slug'   => 'theme-general-settings',
-    ));
+/**
+ * Acf Blocks
+ */
+
+require get_template_directory() . '/inc/acf-blocks.php';
+
+
+// Add default color to heading block
+add_theme_support('editor-color-palette', array(
+    array(
+        'name' => __('Td Orange', 'td-comm'),
+        'slug' => 'td-orange',
+        'color' => '#D85C27',
+    ),
+    array(
+        'name' => __('Td Blue', 'td-comm'),
+        'slug' => 'td-blue',
+        'color' => '#022864',
+    ),
+
+));
+
+
+// Add Css to block editor
+add_action('enqueue_block_editor_assets', 'td_comm_editor_styles');
+function td_comm_editor_styles()
+{
+    wp_enqueue_style('td-comm-editor-styles', get_template_directory_uri() . '/dist/css/editor.css');
 }
+
+add_filter('block_categories_all', function ($categories) {
+
+    // Adding a new category.
+    $categories[] = array(
+        'slug'  => 'tdComm',
+        'title' => 'TdComm',
+        // icon the logo
+        'icon'  => 'tdcomm',
+        'order' => 1,
+    );
+
+    return $categories;
+});

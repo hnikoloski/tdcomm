@@ -1,0 +1,28 @@
+.tdcomm-full-width-content-block {
+  padding: 7.6rem 32.4rem 4.2rem 32.4rem;
+  background: var(--bgImg);
+  color: #fff;
+  margin: 0 -32.4rem;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: var(--leftPost) var(--topPos);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlayColor);
+    z-index: 0;
+  }
+  .inner-blocks {
+    z-index: 1;
+    position: relative;
+    p,
+    li {
+      font-size: 1.8rem;
+    }
+  }
+}

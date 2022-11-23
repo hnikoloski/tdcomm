@@ -1,13 +1,113 @@
 footer.site-footer {
-  background: $secondary;
-  padding: 3rem 0;
-  p {
-    font-size: 1.2rem;
-    color: #adadad;
-    font-family: $ruda;
-    b {
-      color: #fff;
-      font-weight: 700;
+  background: $primary;
+  .site-info {
+    padding: 8.4rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .col {
+      flex: 0 0 auto;
+      max-width: 25%;
+      .logo-wrapper {
+        width: 17.7rem;
+        height: 4rem;
+        margin-top: 2.2rem;
+      }
+      &:not(:last-of-type) {
+        margin-right: 10rem;
+      }
+      .col-label {
+        margin-bottom: 3.5rem;
+        font-size: 1.8rem;
+        font-family: $ruda;
+        color: #fff;
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: -0.7rem;
+          width: 100%;
+          height: 0.2rem;
+          background: $lblue;
+        }
+      }
+      ul {
+        &.footer-menu {
+          li {
+            a {
+              color: #fff;
+              &:hover {
+                color: $lblue;
+              }
+            }
+            &.large-label {
+              &:not(:last-of-type) {
+                margin-bottom: 3.5rem;
+              }
+              a {
+                font-size: 1.8rem;
+                font-family: $ruda;
+                font-weight: 700;
+                position: relative;
+                &::after {
+                  position: absolute;
+                  content: "";
+                  left: 0;
+                  bottom: -0.7rem;
+                  width: 100%;
+                  height: 0.2rem;
+                  background: $lblue;
+                }
+              }
+            }
+            &.small-label {
+              &:not(:last-of-type) {
+                margin-bottom: 1.5rem;
+              }
+              a {
+                font-size: 1.6rem;
+                font-family: $notoSans;
+              }
+            }
+          }
+        }
+      }
+      .socials {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 26rem;
+        li {
+          margin: 0 1.7rem 1.1rem 0;
+          a {
+            display: block;
+            width: 4.75rem;
+            height: 4.4rem;
+            &:hover {
+              @include transform(scale(1.1));
+            }
+            img {
+              @include fullSizeImg(contain);
+            }
+          }
+        }
+      }
+    }
+  }
+  .copy-bar {
+    background: $secondary;
+    padding: 3rem 0;
+    border-top: 0.2rem solid $accent;
+    p {
+      font-size: 1.2rem;
+      color: #adadad;
+      font-family: $ruda;
+      b {
+        color: #fff;
+        font-weight: 700;
+      }
     }
   }
 }

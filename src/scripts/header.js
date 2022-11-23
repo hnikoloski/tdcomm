@@ -18,5 +18,7 @@ jQuery(document).ready(function ($) {
     //         $("#masthead").removeClass("sticky");
     //     }
     // });
-
+    if ($('#masthead .main-navigation li.current-menu-item a')) {
+        $('#masthead .main-navigation li.current-menu-item a').addClass('active');
+    }
 });

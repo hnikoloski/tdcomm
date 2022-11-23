@@ -40,4 +40,14 @@ jQuery(document).ready(function ($) {
   $('#preloader').fadeOut('500', function () {
     $(this).remove();
   });
+
+  if ($('.content-wrapper .wp-block-spacer').length) {
+    // Convert the px to rem
+    var spacer = $('.content-wrapper .wp-block-spacer').css('height');
+    var spacerRem = spacer.replace('px', '');
+    var spacerRem = spacerRem / 10;
+    $('.content-wrapper .wp-block-spacer').css('height', spacerRem + 'rem');
+
+  }
+
 });

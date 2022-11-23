@@ -1,0 +1,26 @@
+.tdcomm-media-with-content-block {
+  margin: 5.5rem 0;
+  .block-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .inner-blocks {
+      flex: 0 0 var(--invertSize);
+      max-width: var(--invertSize);
+      width: var(--invertSize);
+      margin-right: 5.3rem;
+      p,
+      li {
+        font-size: 1.8rem;
+      }
+    }
+    .block-image {
+      flex: 0 0 var(--imgSize);
+      max-width: var(--imgSize);
+      width: var(--imgSize);
+      img {
+        @include fullSizeImg(cover);
+      }
+    }
+  }
+}

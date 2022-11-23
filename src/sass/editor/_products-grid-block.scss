@@ -1,0 +1,42 @@
+.wp-block-acf-products-grid {
+  .products-grid-block {
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      .product-card {
+        text-align: center;
+        width: 33%;
+        flex: 0 0 33%;
+        max-width: 259px;
+        margin-bottom: 55px;
+        &:not(:nth-of-type(-n + 3)) {
+          margin-bottom: 0rem;
+        }
+        &:not(:nth-of-type(3n)) {
+          margin-right: 4px;
+        }
+        &__title {
+          font-size: 24px;
+          margin-bottom: 24px;
+        }
+        &__image {
+          width: 194px;
+          height: 194px;
+          border-radius: 50px;
+          background: #d9d9d9;
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 11px auto;
+          img {
+            max-width: 90%;
+            max-height: 90%;
+          }
+        }
+      }
+    }
+  }
+}

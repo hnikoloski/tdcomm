@@ -38,11 +38,14 @@
               width: 100%;
               height: 0.2rem;
               background: $accent;
-              transition: 0.3s;
+              @include transit(transform 0.25s ease-in);
               @include transform(scaleX(0));
+              transform-origin: right;
             }
-            &:hover {
+            &:hover,
+            &.active {
               &:after {
+                transform-origin: left;
                 @include transform(scaleX(1));
               }
             }

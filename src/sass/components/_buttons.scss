@@ -8,11 +8,23 @@
   transition: 0.3s;
   color: #fff;
   display: inline-block;
+  &-medium {
+    padding: 1.2rem 3rem;
+  }
+
   &-primary {
     color: $accent;
     &:hover {
       background: $accent;
       color: #fff;
+    }
+    &-invert {
+      color: #fff;
+      background: $accent;
+      &:hover {
+        background: #fff;
+        color: $accent;
+      }
     }
   }
 }

@@ -1,0 +1,75 @@
+main {
+  > .content-wrapper {
+    padding: 8.5rem 32.4rem;
+
+    p {
+      font-size: 2rem;
+      line-height: 1.2;
+      &:not(:last-of-type) {
+        margin-bottom: 2.6rem;
+      }
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 3.8rem;
+    }
+    h3 {
+      font-size: 3.6rem;
+    }
+    h4 {
+      font-size: 3.4rem;
+    }
+    h5 {
+      font-size: 3.2rem;
+    }
+    h6 {
+      font-size: 3rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 2.5rem;
+      font-family: $ruda;
+    }
+    strong,
+    b {
+      font-weight: 600;
+    }
+    ul {
+      list-style: disc;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding-left: 4rem;
+      li {
+        font-size: 2rem;
+      }
+    }
+  }
+  .has-td-blue-background-color {
+    background-color: $primary;
+  }
+  .has-td-orange-color {
+    color: $accent;
+  }
+  .has-td-blue-color {
+    color: $primary;
+  }
+  .has-td-white-color {
+    color: #fff;
+  }
+  .has-td-black-color {
+    color: #000;
+  }
+  .has-td-blue-border-color {
+    border-color: $primary;
+  }
+  .has-td-orange-border-color {
+    border-color: $accent;
+  }
+}
