@@ -1,6 +1,4 @@
-# wp-starter
-
-TdComm Wordpress Theme
+# TdComm Wordpress Theme
 
 ## Installation
 
