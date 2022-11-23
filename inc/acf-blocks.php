@@ -19,6 +19,9 @@ function tdcomm_acf_init_block_types()
                 'category'          => 'tdComm',
                 'icon'              => 'tdcomm',
                 'keywords'          => array('products', 'product', 'grid'),
+                'supports'          => array(
+                    'mode' => true,
+                ),
             ),
         );
 
@@ -52,6 +55,20 @@ function tdcomm_acf_init_block_types()
                 'jsx' => true,
             ),
             'render_template'   => 'block-templates/full-width-tdcomm-content.php',
+        ));
+
+        // TdComm Buttons block
+        acf_register_block_type(array(
+            'name'              => 'tdcomm-buttons',
+            'title'             => 'TdComm Buttons',
+            'description'       => 'Display Buttons',
+            'category'          => 'tdComm',
+            'icon'              => 'tdcomm',
+            'mode'              => 'preview',
+            'supports' => array(
+                'mode' => true,
+            ),
+            'render_template'   => 'block-templates/tdcomm-buttons.php',
         ));
     }
 }

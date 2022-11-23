@@ -1,0 +1,57 @@
+.wp-block-acf-tdcomm-buttons {
+  .td-btn {
+    text-decoration: none;
+    padding: 12px 38px;
+    border-radius: 5px;
+    border: 2px solid $accent;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: $ruda;
+    transition: 0.3s;
+    color: #fff;
+    display: inline-block;
+    &-medium {
+      padding: 12px 30px;
+    }
+    &-small {
+      padding: 10px 25px;
+      font-size: 16px;
+    }
+    &-large {
+      padding: 14px 45px;
+      font-size: 20px;
+    }
+
+    &-primary {
+      color: $accent;
+      &:hover {
+        background: $accent;
+        color: #fff;
+      }
+      &-invert {
+        color: #fff;
+        background: $accent;
+        &:hover {
+          background: #fff;
+          color: $accent;
+        }
+      }
+    }
+    &-inverted {
+      color: #fff;
+      background: $accent;
+      &:hover {
+        background: #fff;
+        color: $accent;
+      }
+    }
+  }
+
+  .tdcomm-buttons-block {
+    .td-btn {
+      display: block;
+      width: fit-content;
+      width: -moz-fit-content;
+    }
+  }
+}
