@@ -17,7 +17,7 @@
                 <div class="single-blog blog-card">
                     <h4 class="blog-card__title"><?php the_title(); ?></h4>
                     <div class="blog-card__image-wrapper">
-                        <img src="<?= get_the_post_thumbnail_url($post->ID, 'medium'); ?>" alt="<?php the_title(); ?>">
+                        <img src="<?= get_the_post_thumbnail_url($post->ID, 'full'); ?>" alt="<?php the_title(); ?>">
                     </div>
                     <a href="<?php the_permalink(); ?>" class="blog-card__link"><?php _e('Learn more', 'tdcomm'); ?></a>
                 </div>

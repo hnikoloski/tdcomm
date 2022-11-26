@@ -1,5 +1,6 @@
 .tdcomm-full-width-content-block {
-  padding: 8.4rem 32.4rem 8.4rem 32.4rem;
+  padding: calc(8.4rem + var(--extraSize)) 32.4rem
+    calc(8.4rem + var(--extraSize)) 32.4rem;
   background: var(--bgImg);
   color: #fff;
   margin: 0 -32.4rem;
@@ -7,6 +8,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: var(--leftPost) var(--topPos);
+  &.remove-b-spacing {
+    margin-bottom: -8.5rem;
+  }
   &::before {
     content: "";
     position: absolute;

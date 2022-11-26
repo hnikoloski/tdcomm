@@ -1,11 +1,11 @@
 {
-    "key": "group_6374ea1436010",
-    "title": "Socials",
+    "key": "group_638224d33ba1a",
+    "title": "Potential Clients Fields",
     "fields": [
         {
-            "key": "field_6374ea4b19690",
-            "label": "LinkedIn",
-            "name": "linkedin_link",
+            "key": "field_638224dccfb44",
+            "label": "Full Name",
+            "name": "full_name",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,9 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_6374ea6619691",
+            "key": "field_638224e8cfb45",
             "label": "Email",
-            "name": "email_social",
+            "name": "email",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,9 +41,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_6374ea221968e",
-            "label": "Facebook",
-            "name": "facebook_link",
+            "key": "field_638224f7cfb46",
+            "label": "Company Type",
+            "name": "company_type",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -60,10 +60,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_6374ea461968f",
-            "label": "Instagram",
-            "name": "instagram_link",
-            "type": "text",
+            "key": "field_63822502cfb47",
+            "label": "Message",
+            "name": "message",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -74,36 +74,17 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6380ed8fa337d",
-            "label": "Contact Email",
-            "name": "td_contact_form_email",
-            "type": "text",
-            "instructions": "This email is used for the contact form block. If left empty the admin email will be used.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf-options-socials"
+                "value": "potential_clients"
             }
         ]
     ],
@@ -112,9 +93,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669393845
+    "modified": 1669473576
 }

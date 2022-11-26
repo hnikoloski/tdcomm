@@ -40,6 +40,9 @@ main {
     strong,
     b {
       font-weight: 600;
+      * {
+        font-weight: inherit;
+      }
     }
     ul {
       list-style: disc;

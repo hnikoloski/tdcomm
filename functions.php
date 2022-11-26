@@ -200,6 +200,12 @@ require get_template_directory() . '/inc/acf-options-pages.php';
 
 require get_template_directory() . '/inc/acf-blocks.php';
 
+/**
+ * Endpoints
+ */
+
+require get_template_directory() . '/inc/endpoints.php';
+
 
 // Add default color to heading block
 add_theme_support('editor-color-palette', array(
@@ -237,3 +243,9 @@ add_filter('block_categories_all', function ($categories) {
 
     return $categories;
 });
+// Aligment full
+add_theme_support('align-wide');
+
+
+// Set medium image size
+// add_image_size('card_medium', 470, 290, true);

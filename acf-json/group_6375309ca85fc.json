@@ -141,6 +141,13 @@
                 "operator": "==",
                 "value": "products"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "industries"
+            }
         ]
     ],
     "menu_order": 0,
@@ -152,5 +159,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669229205
+    "modified": 1669325190
 }

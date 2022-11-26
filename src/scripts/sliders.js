@@ -1,6 +1,6 @@
 
 import Swiper, { Autoplay, Pagination } from 'swiper';
-
+import { Fancybox } from "@fancyapps/ui";
 jQuery(document).ready(function ($) {
     if ($('.swiper-home')) {
         const swiper = new Swiper('.swiper-home', {
@@ -54,5 +54,47 @@ jQuery(document).ready(function ($) {
         );
         // convert px to rem
         return px / rootFontSize;
+    }
+
+
+    // create swiper for the gallery
+    function createSlider(slider, slidesToShow, spaceBetween) {
+        let gallerySwiper = new Swiper(slider, {
+            slidesPerView: slidesToShow,
+            spaceBetween: spaceBetween,
+            centeredSlides: true,
+            loop: true,
+            loopedSlides: 2,
+            // Same height for all slides
+            autoHeight: false,
+            onInit: function (sw) {
+                // If slidesPerView is same as number of slides, hide navigation AllowTouchMove
+                if (sw.slides.length <= slidesToShow) {
+                    sw.allowTouchMove = false;
+                    sw.navigation.destroy();
+                    sw.pagination.destroy();
+                }
+            },
+
+
+
+        });
+
+    }
+
+    if ($('.tdcomm-slider-block .gallery-slider').length) {
+
+        // Loop through each gallery and create a slider
+        $('.tdcomm-slider-block .gallery-slider').each(function () {
+            let sliderId = '#' + $(this).attr('id');
+            let slidesToShow = $(this).attr('data-slides-to-show');
+            let spaceBetween = $(this).attr('data-space-between');
+            // Convert to number
+            slidesToShow = parseInt(slidesToShow);
+            spaceBetween = parseInt(spaceBetween);
+            createSlider(sliderId, slidesToShow, spaceBetween);
+        });
+
+
     }
 });

@@ -41,6 +41,12 @@ else :
     $heroTitle = get_field('inner_hero_title', $pageId) ?: get_the_title();
     $heroSubTitle = get_field('inner_hero_sub_title', $pageId);
     $image = get_field('inner_hero_bg', $pageId) ?: '';
+
+    // If it is single blog post
+    if (is_single() && get_post_type() === 'post' && $image === '') :
+
+        $image = get_the_post_thumbnail_url($pageId, 'full');
+    endif;
 ?>
 
     <div id="hero" class="hero-inner" style="--bgImg:url('<?= $image ?>');">

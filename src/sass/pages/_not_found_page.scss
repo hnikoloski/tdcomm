@@ -1,0 +1,139 @@
+body.error404 {
+  $anims: float, floatReverse, float2, floatReverse2;
+  $easeSmooth: cubic-bezier(0.39, 0.575, 0.28, 0.995);
+  $color: #595959;
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60rem;
+    background: white;
+    color: black;
+    font-family: $ruda;
+    overflow: hidden;
+  }
+
+  .content {
+    position: relative;
+    width: 50rem;
+    max-width: 100%;
+    margin: 2rem;
+    background: $primary;
+    padding: 6rem 4rem;
+    text-align: center;
+    box-shadow: -1rem 1rem 6.7rem -1.2rem rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: apparition 0.8s 0.2s $easeSmooth forwards;
+
+    p {
+      font-size: 2.2rem;
+      margin-top: 0;
+      margin-bottom: 1.6rem;
+      letter-spacing: 0.1em;
+      color: #fff;
+      b {
+        font-weight: 800;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 0.3rem solid $accent;
+      background: transparent;
+      font-size: 2.2rem;
+      color: $accent;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+
+  .particle {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+
+    @for $i from 1 through 80 {
+      color: $accent;
+      &:nth-child(#{$i}) {
+        $size: random(20) + 10;
+        $blur: calc(($i * 0.02) / 10);
+        $speed: random(20) + 20;
+        $delay: random(10) * 0.1;
+        $anim: nth($anims, random(length($anims)));
+
+        top: random(100) / (100 + $size/8) * 100%;
+        left: random(100) / (100 + $size/10) * 100%;
+        font-size: calc($size / 10) + rem;
+        filter: blur((#{$blur}) + rem);
+        animation: $speed + s $anim infinite;
+      }
+    }
+  }
+
+  @keyframes apparition {
+    from {
+      opacity: 0;
+      transform: translateY(10rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(18rem);
+    }
+  }
+
+  @keyframes floatReverse {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-18rem);
+    }
+  }
+
+  @keyframes float2 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(2.8rem);
+    }
+  }
+
+  @keyframes floatReverse2 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2.8rem);
+    }
+  }
+
+  @mixin animation($delay, $duration, $animation) {
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+}

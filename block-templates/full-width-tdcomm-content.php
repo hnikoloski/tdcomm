@@ -23,9 +23,18 @@ $bgImg = get_field('td_fw_block_bg_image') ?: '';
 $overlayColor = get_field('td_fw_block_overlay_color') ?: '#02286499';
 $bgPositionTopBottom = get_field('td_fw_block_top_bottom_position') ?: '50';
 $bgPositionLeftRight = get_field('td_fw_block_leftright_position') ?: '50';
+$extraSize = get_field('td_fw_block_extra_size') ?: '0';
+
+// check if in edit mode
+if (is_admin()) {
+    $extraSize = $extraSize . 'px';
+} else {
+    $extraSize = $extraSize / 10 . 'rem';
+}
+
 
 ?>
-<div class="tdcomm-full-width-content-block <?php echo esc_attr($classes); ?>" style="--bgImg:url('<?php echo $bgImg; ?>'); --overlayColor:<?php echo $overlayColor; ?>; --topPos:<?php echo $bgPositionTopBottom ?>%; --leftPost:<?php echo $bgPositionLeftRight; ?>%;">
+<div class="tdcomm-full-width-content-block <?php echo esc_attr($classes); ?>" style="--extraSize:<?php echo $extraSize; ?>; --bgImg:url('<?php echo $bgImg; ?>'); --overlayColor:<?php echo $overlayColor; ?>; --topPos:<?php echo $bgPositionTopBottom ?>%; --leftPost:<?php echo $bgPositionLeftRight; ?>%;">
     <div class="inner-blocks">
         <InnerBlocks />
     </div>

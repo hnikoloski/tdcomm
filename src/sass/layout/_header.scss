@@ -21,6 +21,7 @@
       align-content: center;
       align-items: center;
       li {
+        z-index: 1024;
         &:not(.td-btn) {
           &:not(:last-of-type) {
             margin-right: 10rem;
@@ -51,6 +52,37 @@
             }
           }
         }
+
+        &.menu-item-has-children {
+          position: relative;
+          perspective: 1000px;
+          .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform-origin: top center;
+            perspective: 1000px;
+            display: none;
+            -webkit-animation: rotateMenu 0.4s ease-in-out forwards;
+            animation: rotateMenu 0.4s ease-in-out forwards;
+            background-color: $primary;
+            padding: 1.5rem;
+          }
+          &:hover {
+            .sub-menu {
+              display: block;
+              li {
+                &:not(:last-of-type) {
+                  margin-bottom: 2rem;
+                }
+                a {
+                  display: inline-block;
+                  white-space: nowrap;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -63,5 +95,16 @@
     a {
       color: inherit;
     }
+  }
+}
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
   }
 }

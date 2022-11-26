@@ -41,7 +41,7 @@ function tdcomm_acf_init_block_types()
             'render_template'   => 'block-templates/media-with-content.php',
         ));
 
-        // TdComm Columns block
+        // TdComm Full Width block
         acf_register_block_type(array(
             'name'              => 'tdcomm-full-width-content',
             'title'             => 'TdComm Full Width Content',
@@ -69,6 +69,48 @@ function tdcomm_acf_init_block_types()
                 'mode' => true,
             ),
             'render_template'   => 'block-templates/tdcomm-buttons.php',
+        ));
+
+        // TdComm Slider block
+        acf_register_block_type(array(
+            'name'              => 'tdcomm-slider',
+            'title'             => 'TdComm Slider',
+            'description'       => 'Display Slider',
+            'category'          => 'tdComm',
+            'icon'              => 'tdcomm',
+            'mode'              => 'preview',
+            'supports' => array(
+                'mode' => true,
+            ),
+            'render_template'   => 'block-templates/tdcomm-slider.php',
+        ));
+
+        // TdComm Icon Box block
+        acf_register_block_type(array(
+            'name'              => 'tdcomm-icon-box',
+            'title'             => 'TdComm Icon Box',
+            'description'       => 'Display Icon Box',
+            'category'          => 'tdComm',
+            'icon'              => 'tdcomm',
+            'mode'              => 'preview',
+            'supports' => array(
+                'mode' => true,
+            ),
+            'render_template'   => 'block-templates/tdcomm-icon-box.php',
+        ));
+
+        // TdComm Contact Form block
+        acf_register_block_type(array(
+            'name'              => 'tdcomm-contact-form',
+            'title'             => 'TdComm Contact Form',
+            'description'       => 'Display Contact Form',
+            'category'          => 'tdComm',
+            'icon'              => 'tdcomm',
+            'mode'              => 'preview',
+            'supports' => array(
+                'mode' => true,
+            ),
+            'render_template'   => 'block-templates/tdcomm-contact-form.php',
         ));
     }
 }

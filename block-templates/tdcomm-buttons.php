@@ -26,6 +26,8 @@ $btnHref = get_field('td_btns_button_href') ?: '#';
 $btnText = get_field('td_btns_button_text') ?: 'View More';
 $horAlign = get_field('td_btns_vertical_align') ?: 'center';
 $openInNewTab = get_field('td_btns_open_in_new_tab') ?: false;
+
+$captureDataCheck = get_field('td_btns_capture_data') ?: false;
 if ($btnSize == 'default') {
     $btnSize = '';
 }
@@ -51,22 +53,35 @@ if ($horAlign == 'center') {
 
 $newTabAttrs = '';
 $relAttrs = '';
-foreach ($openInNewTab as $key => $value) {
-    if ($value == 'new_tab') {
-        $newTabAttrs .= 'target="_blank" ';
-    } elseif ($value == 'noopener') {
-        $relAttrs .= 'noopener ';
-    } elseif ($value == 'noreferrer') {
-        $relAttrs .= 'noreferrer ';
+if ($openInNewTab) {
+
+    foreach ($openInNewTab as $key => $value) {
+        if ($value == 'new_tab') {
+            $newTabAttrs .= 'target="_blank" ';
+        } elseif ($value == 'noopener') {
+            $relAttrs .= 'noopener ';
+        } elseif ($value == 'noreferrer') {
+            $relAttrs .= 'noreferrer ';
+        }
     }
 }
 
 $newTabAttrs = $newTabAttrs . ' rel="' . $relAttrs . '"';
-
+$blockId = $block['id'];
+$blockFile = get_field('td_btns_button_file_to_download', $block['id']);
 
 ?>
-<a href="http://" target="_blank" rel="noopener noreferrer"></a>
 <div <?= $anchor; ?> class="<?= esc_attr($class_name); ?>">
-    <a href="<?php echo $btnHref; ?>" <?php echo $downloadAttr;
-                                        echo ' ' . $newTabAttrs; ?> class="td-btn td-btn-<?php echo $btnType; ?> td-btn-<?php echo $btnSize; ?> <?php echo $btnAlignClass; ?>"><?php echo $btnText ?></a>
+    <?php if ($captureDataCheck[0] == 'yes') { ?>
+        <a href="<?php echo get_home_url(); ?>" data-block="<?php echo $blockId; ?>" class="td-cap-btn td-btn td-btn-<?php echo $btnType; ?> td-btn-<?php echo $btnSize; ?> <?php echo $btnAlignClass; ?>"><?php echo $btnText ?></a>
+        <?php
+        require_once get_template_directory() . '/block-templates/block-parts/download-modal.php';
+        ?>
+    <?php } else {
+    ?>
+        <a href="<?php echo $btnHref; ?>" <?php echo $downloadAttr;
+                                            echo ' ' . $newTabAttrs; ?> class="td-btn td-btn-<?php echo $btnType; ?> td-btn-<?php echo $btnSize; ?> <?php echo $btnAlignClass; ?>"><?php echo $btnText ?></a>
+    <?php
+    }
+    ?>
 </div>

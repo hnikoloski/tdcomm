@@ -19,6 +19,7 @@ jQuery(document).ready(function ($) {
     //     }
     // });
     if ($('#masthead .main-navigation li.current-menu-item a')) {
-        $('#masthead .main-navigation li.current-menu-item a').addClass('active');
+        $('#masthead .main-navigation li.current-menu-item > a').addClass('active');
+        $('#masthead .main-navigation li.current_page_ancestor > a').addClass('active');
     }
 });

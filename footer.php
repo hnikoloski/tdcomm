@@ -1,9 +1,14 @@
 <div class="cta cta-footer">
-    <?php
-    if (get_field('footer_cta_text', 'option')) :
-        the_field('footer_cta_text', 'option');
-    endif;
-    ?>
+    <div>
+        <?php
+        if (get_field('footer_cta_text', 'option')) :
+            the_field('footer_cta_text', 'option');
+        endif;
+        ?>
+    </div>
+    <?php if (get_field('contact_button_link_to', 'option')) : ?>
+        <a href="<?php the_field('contact_button_link_to', 'option'); ?>" class="td-btn td-btn-outline-w"><?php the_field('contact_button_text', 'option'); ?></a>
+    <?php endif; ?>
 </div>
 <footer id="colophon" class="site-footer">
     <div class="site-info">

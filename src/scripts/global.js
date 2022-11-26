@@ -42,11 +42,14 @@ jQuery(document).ready(function ($) {
   });
 
   if ($('.content-wrapper .wp-block-spacer').length) {
-    // Convert the px to rem
-    var spacer = $('.content-wrapper .wp-block-spacer').css('height');
-    var spacerRem = spacer.replace('px', '');
-    var spacerRem = spacerRem / 10;
-    $('.content-wrapper .wp-block-spacer').css('height', spacerRem + 'rem');
+    // Convert each spacer the px to rem
+    $('.content-wrapper .wp-block-spacer').each(function () {
+      var px = $(this).css('height');
+      var rem = px.replace('px', '') / 10;
+      $(this).css('height', rem + 'rem');
+
+
+    });
 
   }
 

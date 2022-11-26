@@ -3,6 +3,29 @@
     "title": "TdComm Buttons",
     "fields": [
         {
+            "key": "field_6381303a5951f",
+            "label": "Capture Data Button",
+            "name": "td_btns_capture_data",
+            "type": "checkbox",
+            "instructions": "If selected it will show the popup for the user to enter their data before sending the downloadable file.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
             "key": "field_637e7d20d245f",
             "label": "Button Type",
             "name": "td_btns_button_type",
@@ -59,7 +82,15 @@
             "type": "radio",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6381303a5951f",
+                        "operator": "!=",
+                        "value": "yes"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -150,6 +181,33 @@
             "maxlength": ""
         },
         {
+            "key": "field_6381310eccc9c",
+            "label": "File to download after form is submited.",
+            "name": "td_btns_button_file_to_download",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6381303a5951f",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_637e7ea5d2464",
             "label": "Aligment",
             "name": "td_btns_vertical_align",
@@ -218,5 +276,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669236081
+    "modified": 1669411358
 }

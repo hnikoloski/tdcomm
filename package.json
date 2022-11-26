@@ -24,6 +24,7 @@
     "webpack-livereload-plugin": "^1.2.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "@popperjs/core": "^2.9.2",
     "swiper": "^8.4.4"
   }

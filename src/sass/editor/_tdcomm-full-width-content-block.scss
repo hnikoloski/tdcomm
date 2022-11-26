@@ -1,7 +1,8 @@
 .wp-block-acf-tdcomm-full-width-content {
   max-width: 100%;
   .tdcomm-full-width-content-block {
-    padding: 84px 324px 84px 324px;
+    padding: calc(84px + var(--extraSize)) 324px calc(84px + var(--extraSize))
+      324px;
     background: var(--bgImg);
     color: #fff;
     position: relative;
