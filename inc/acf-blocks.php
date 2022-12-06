@@ -112,6 +112,20 @@ function tdcomm_acf_init_block_types()
             ),
             'render_template'   => 'block-templates/tdcomm-contact-form.php',
         ));
+
+        // TdComm List block
+        acf_register_block_type(array(
+            'name'              => 'tdcomm-list',
+            'title'             => 'TdComm List',
+            'description'       => 'Display List',
+            'category'          => 'tdComm',
+            'icon'              => 'tdcomm',
+            'mode'              => 'preview',
+            'supports' => array(
+                'mode' => true,
+            ),
+            'render_template'   => 'block-templates/tdcomm-list.php',
+        ));
     }
 }
 

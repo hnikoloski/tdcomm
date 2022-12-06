@@ -6,10 +6,13 @@ body.home {
       margin-bottom: 7.7rem;
     }
     .section-description {
-      max-width: 77.1rem;
+      max-width: 122.8rem;
       margin: 0 auto 9rem auto;
       p {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        &:not(:last-of-type) {
+          margin-bottom: 3.5rem;
+        }
       }
     }
   }
@@ -27,6 +30,72 @@ body.home {
         flex: 0 0 38.2rem;
         max-width: 38.2rem;
         width: 38.2rem;
+      }
+    }
+    &-opt-two {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      background: #ebf1fb;
+      max-width: 100%;
+      padding: 9.5rem 28.2rem 8.5rem 28.2rem;
+      .section-title {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+      .posts-wrapper {
+        flex: 0 0 40rem;
+        width: 40rem;
+        max-width: 40rem;
+        .single-product {
+          display: flex;
+          align-items: center;
+          align-content: center;
+          flex-wrap: wrap;
+          flex: 0 0 100%;
+          max-width: 100%;
+          width: 100%;
+          &:not(:last-of-type) {
+            margin-bottom: 5.5rem;
+          }
+          &:hover {
+            @include transit(transform 0.25s ease-in);
+            @include transform(scale(1.05));
+          }
+          .img-wrapper {
+            width: 8.3rem;
+            height: 8.3rem;
+            flex: 0 0 8.3rem;
+            @include borderRadius(50%);
+            background: #2b478b;
+            padding: 1.3rem;
+            position: relative;
+            z-index: 1;
+            img {
+              @include fullSizeImg(contain);
+            }
+          }
+          .product-title {
+            line-height: 1;
+            background: $accent;
+            padding: 2.6rem 3.6rem;
+            @include borderRadius(0px 0.5rem 6rem 0px);
+            font-size: 2.2rem;
+            color: #fff;
+            margin-left: -2.8rem;
+            width: calc(100% - 8.3rem);
+          }
+        }
+      }
+      .products-section__image-wrapper {
+        flex: 0 0 72.7rem;
+        max-width: 72.7rem;
+        width: 72.7rem;
+        img {
+          @include fullSizeImg(contain);
+        }
       }
     }
   }

@@ -1,7 +1,16 @@
 #hero {
   &.hero-home {
+    border-bottom-right-radius: 50rem;
+    overflow: hidden;
+    min-height: 73.7rem;
     .swiper {
+      height: 100%;
+      &-wrapper {
+        min-height: 73.7rem;
+      }
       &-slide {
+        min-height: 73.7rem;
+        @include bg-props(cover, center, no-repeat);
         background: var(--bgImage);
         padding: 14.3rem 32.4rem 15.7rem 32.4rem;
         &::before {
@@ -18,12 +27,14 @@
           width: 74.7rem;
           position: relative;
           z-index: 1;
+          height: 100%;
+
           h2 {
             color: #fff;
             font-size: 4.8rem;
             line-height: 1.02;
             margin-bottom: 1.7rem;
-            font-family: $ruda;
+            font-family: $hebo;
             span {
               font-weight: 900;
               color: $accent;
@@ -50,6 +61,8 @@
     @include bg-props(cover, center, no-repeat);
     padding: 14.7rem 32.4rem 18.6rem 32.4rem;
     position: relative;
+    @include borderRadius(0px 0px 20rem 0px);
+    overflow: hidden;
     &::before {
       content: "";
       position: absolute;
@@ -65,7 +78,7 @@
       z-index: 1;
       h1 {
         color: #fff;
-        font-family: $ruda;
+        font-family: $hebo;
         font-size: 4.8rem;
         font-weight: 600;
         line-height: 0.7;

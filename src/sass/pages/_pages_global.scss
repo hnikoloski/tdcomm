@@ -1,7 +1,32 @@
 main {
   > .content-wrapper {
     padding: 8.5rem 32.4rem;
-
+    position: relative;
+    overflow: hidden;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+    }
+    &::before {
+      bottom: calc(-32.4rem / 2);
+      left: 0;
+      background: var(--leftSideDeco);
+      @include bg-props(cover, right, no-repeat);
+      width: 42rem;
+      height: 90.4rem;
+      // max-height: 81rem;
+    }
+    &::after {
+      bottom: 8.5rem;
+      right: 0;
+      background: var(--rightSideDeco);
+      @include bg-props(cover, left, no-repeat);
+      width: 42rem;
+      height: 55.1rem;
+      // max-height: 81rem;
+    }
     p {
       font-size: 2rem;
       line-height: 1.2;
@@ -35,7 +60,7 @@ main {
     h5,
     h6 {
       margin-bottom: 2.5rem;
-      font-family: $ruda;
+      font-family: $hebo;
     }
     strong,
     b {

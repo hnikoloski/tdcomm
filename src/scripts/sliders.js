@@ -4,7 +4,7 @@ import { Fancybox } from "@fancyapps/ui";
 jQuery(document).ready(function ($) {
     if ($('.swiper-home')) {
         const swiper = new Swiper('.swiper-home', {
-            loop: true,
+            loop: false,
             modules: [Autoplay],
             autoplay: {
                 delay: 5000,
@@ -12,6 +12,8 @@ jQuery(document).ready(function ($) {
             slidesPerView: 1,
             spaceBetween: 0,
             speed: 1000,
+            runCallbacksOnInit: true,
+
         });
     }
 

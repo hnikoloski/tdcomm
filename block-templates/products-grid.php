@@ -49,10 +49,12 @@ $theBtnText            = get_field('the_btn_text') ?: 'View';
                 ?>
                 <div class="product-card">
                     <h3 class="product-card__title"><?php the_title(); ?></h3>
-                    <div class="product-card__image">
-                        <img src="<?php echo $theProductImage; ?>" alt="<?php the_title(); ?>">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__image">
+                            <img src="<?php echo $theProductImage; ?>" alt="<?php the_title(); ?>">
+                        </div>
+                        <a href="<?php the_permalink(); ?>" class="td-btn td-btn-primary-invert td-btn-medium"><?php echo $theBtnText; ?></a>
                     </div>
-                    <a href="<?php the_permalink(); ?>" class="td-btn td-btn-primary-invert td-btn-medium"><?php echo $theBtnText; ?></a>
                 </div>
             <?php endwhile; ?>
         </div>

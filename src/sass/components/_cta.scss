@@ -7,17 +7,36 @@
     align-items: center;
     justify-content: flex-start;
     align-content: center;
+    @include borderRadius(15rem 0 0 0);
     > div {
-      margin-right: 10rem;
-      flex: 0 0 80rem;
-      max-width: 80rem;
-
+      flex: 0 0 50%;
+      max-width: 50%;
+      width: 50%;
       p {
         color: #fff;
         font-size: 4rem;
         font-weight: 600;
         line-height: 1.25;
-        font-family: $ruda;
+        font-family: $hebo;
+      }
+    }
+    .icons-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      align-content: center;
+
+      a {
+        width: 3.4rem;
+        height: 3.4rem;
+        display: block;
+        &:not(:last-of-type) {
+          margin-right: 6.8rem;
+        }
+        &:hover {
+          @include transform(scale(1.1));
+        }
       }
     }
   }

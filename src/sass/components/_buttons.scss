@@ -1,15 +1,15 @@
 .td-btn {
   padding: 1.2rem 3.8rem;
-  @include borderRadius(0.5rem);
+  @include borderRadius(5rem);
   border: 0.2rem solid $accent;
   font-size: 1.8rem;
   line-height: 1.5;
-  font-family: $ruda;
+  font-family: $hebo;
   transition: 0.3s;
   color: #fff;
   display: inline-block;
   cursor: pointer;
-
+  font-weight: 500;
   &-medium {
     padding: 1.2rem 3rem;
   }

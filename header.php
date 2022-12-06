@@ -51,6 +51,6 @@
                 ?>
             </nav><!-- #site-navigation -->
             <?php if (get_field('contact_button_link_to', 'option')) : ?>
-                <a href="<?php the_field('contact_button_link_to', 'option'); ?>" class="td-btn td-btn-primary"><?php the_field('contact_button_text', 'option'); ?></a>
+                <a href="<?php the_field('contact_button_link_to', 'option'); ?>" class="td-btn td-btn-primary-invert"><?php the_field('contact_button_text', 'option'); ?></a>
             <?php endif; ?>
         </header><!-- #masthead -->

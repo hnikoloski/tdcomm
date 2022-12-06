@@ -1,0 +1,20 @@
+.tdcomm-list-block {
+  padding-left: 2.6rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.5rem;
+    background: $accent;
+    @include borderRadius(5rem);
+    height: 100%;
+  }
+  .block-title {
+    color: $primary;
+    margin-bottom: 1.5rem;
+    font-family: $hebo;
+    font-weight: 500;
+  }
+}
