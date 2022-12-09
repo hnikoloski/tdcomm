@@ -11,6 +11,7 @@ jQuery(document).ready(function ($) {
         $('.close-modal').on('click', function (e) {
             e.preventDefault();
             $('.download-modal').removeClass('active');
+            $('.download-modal form input[name="postId"]').val('');
             $('body').removeClass('overflow-hidden');
             // Reset the form
             $('form.modal-form')[0].reset();
