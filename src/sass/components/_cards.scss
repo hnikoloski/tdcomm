@@ -17,6 +17,7 @@
 
 .industry-card {
   display: flex;
+  height: auto;
   &__image-wrapper {
     flex: 0 0 63.3rem;
     width: 63.3rem;
@@ -34,18 +35,18 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   &__title {
     font-size: 2.2rem;
     line-height: 1.09;
-    margin-bottom: 7.9rem;
+    // margin-bottom: 7.9rem;
     color: #000;
   }
   &__excerpt {
     font-size: 1.8rem;
     line-height: 1.33;
-    margin-bottom: auto;
+    // margin-bottom: auto;
     padding-left: 2.5rem;
     position: relative;
     &::before {
@@ -60,7 +61,7 @@
     }
   }
   .td-btn {
-    margin-top: auto;
+    // margin-top: auto;
     font-weight: 800;
   }
 }

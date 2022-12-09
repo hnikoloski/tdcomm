@@ -13,6 +13,10 @@
         @include bg-props(cover, center, no-repeat);
         background: var(--bgImage);
         padding: 14.3rem 32.4rem 15.7rem 32.4rem;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
         &::before {
           content: "";
           position: absolute;
@@ -63,6 +67,7 @@
     position: relative;
     @include borderRadius(0px 0px 20rem 0px);
     overflow: hidden;
+    min-height: 37.6rem;
     &::before {
       content: "";
       position: absolute;

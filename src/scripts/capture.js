@@ -4,13 +4,21 @@ jQuery(document).ready(function ($) {
     if ($('.td-cap-btn').length) {
         $('.td-cap-btn').on('click', function (e) {
             e.preventDefault();
-            $('#download-modal').addClass('active');
+            $('.download-modal form input[name="postId"]').val($(this).attr('data-pdf-id'));
+            $('.download-modal').addClass('active');
             $('body').addClass('overflow-hidden');
         });
         $('.close-modal').on('click', function (e) {
             e.preventDefault();
-            $('#download-modal').removeClass('active');
+            $('.download-modal').removeClass('active');
             $('body').removeClass('overflow-hidden');
+            // Reset the form
+            $('form.modal-form')[0].reset();
+            $('form.modal-form').find('.error').removeClass('error');
+            $('form.modal-form').find('.error-message').remove();
+            $('.form-group').removeClass('error');
+            $('form.modal-form').find('.success-message').remove();
+
         });
     }
 

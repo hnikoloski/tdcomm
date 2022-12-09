@@ -97,9 +97,9 @@ function tdcomm_downloadable($request)
     $errField = [];
     $block_id = $request->get_param('blockId');
     $acfSelector = 'td_btns_button_file_to_download';
-
-    $fileToDownload = wp_get_attachment_url(get_tdcomm_butons_data($postId));
+    $fileToDownload = get_field('the_brochure', $postId)['url'];
     $fileName = basename($fileToDownload);
+
     if (empty($postId)) {
         // return No Post ID message
         return new WP_REST_Response(array(
@@ -205,25 +205,4 @@ function tdcomm_downloadable($request)
             );
         }
     }
-}
-
-
-function get_tdcomm_butons_data($postId, $block_name = 'acf/tdcomm-buttons', $field_name = "td_btns_button_file_to_download")
-{
-    $content = "";
-    $post = get_post($postId);
-    if (has_blocks($post->post_content) && !empty($field_name)) {
-        $blocks = parse_blocks($post->post_content);
-        foreach ($blocks as $block) {
-            if ($block['blockName'] === $block_name) {
-                if (isset($block["attrs"]["data"][$field_name])) {
-                    //    Return td_btns_button_file_to_download value
-                    return $block["attrs"]["data"]['td_btns_button_file_to_download'];
-                }
-            }
-        }
-    }
-
-
-    return $content;
 }

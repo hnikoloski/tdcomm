@@ -256,6 +256,39 @@
             "toggle": 0,
             "return_format": "value",
             "save_custom": 0
+        },
+        {
+            "key": "field_63930ba3b916a",
+            "label": "Pdf To download",
+            "name": "pdf_to_download",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6381303a5951f",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "brochure"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "id"
         }
     ],
     "location": [
@@ -276,5 +309,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669411358
+    "modified": 1670581226
 }

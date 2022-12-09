@@ -10,22 +10,20 @@ main {
       pointer-events: none;
     }
     &::before {
-      bottom: calc(-32.4rem / 2);
-      left: 0;
+      bottom: var(--leftSideDecoBottom);
+      left: var(--leftSideDecoLeft);
       background: var(--leftSideDeco);
       @include bg-props(cover, right, no-repeat);
-      width: 42rem;
-      height: 90.4rem;
-      // max-height: 81rem;
+      width: var(--leftSideDecoWidth);
+      height: var(--leftSideDecoHeight);
     }
     &::after {
-      bottom: 8.5rem;
-      right: 0;
+      bottom: var(--rightSideDecoBottom);
+      right: var(--rightSideDecoRight);
       background: var(--rightSideDeco);
       @include bg-props(cover, left, no-repeat);
-      width: 42rem;
-      height: 55.1rem;
-      // max-height: 81rem;
+      width: var(--rightSideDecoWidth);
+      height: var(--rightSideDecoHeight);
     }
     p {
       font-size: 2rem;

@@ -69,11 +69,12 @@ if ($openInNewTab) {
 $newTabAttrs = $newTabAttrs . ' rel="' . $relAttrs . '"';
 $blockId = $block['id'];
 $blockFile = get_field('td_btns_button_file_to_download', $block['id']);
+$pdfId = get_field('pdf_to_download')[0];
 
 ?>
 <div <?= $anchor; ?> class="<?= esc_attr($class_name); ?>">
     <?php if ($captureDataCheck[0] == 'yes') { ?>
-        <a href="<?php echo get_home_url(); ?>" data-block="<?php echo $blockId; ?>" class="td-cap-btn td-btn td-btn-<?php echo $btnType; ?> td-btn-<?php echo $btnSize; ?> <?php echo $btnAlignClass; ?>"><?php echo $btnText ?></a>
+        <a href="<?php echo get_home_url(); ?>" data-pdf-id="<?php echo $pdfId; ?>" data-block="<?php echo $blockId; ?>" class="td-cap-btn td-btn td-btn-<?php echo $btnType; ?> td-btn-<?php echo $btnSize; ?> <?php echo $btnAlignClass; ?>"><?php echo $btnText ?></a>
         <?php
         require_once get_template_directory() . '/block-templates/block-parts/download-modal.php';
         ?>

@@ -29,6 +29,7 @@
         height: 28.6rem;
         margin-bottom: 4.5rem;
         overflow: hidden;
+        @include borderRadius(1rem);
         img {
           @include fullSizeImg(cover);
         }

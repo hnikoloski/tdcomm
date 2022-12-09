@@ -23,7 +23,13 @@
                         <div class="industry-card__content-wrapper">
                             <h4 class="industry-card__title"><?php the_title(); ?></h4>
                             <p class="industry-card__excerpt">
-                                <?= get_the_excerpt($post->ID); ?>
+                                <?php
+                                $excerpt = get_the_excerpt($post->ID);
+                                if (strlen($excerpt) > 200) {
+                                    $excerpt = substr($excerpt, 0, 200) . '...';
+                                }
+                                echo $excerpt;
+                                ?>
                             </p>
                             <a href="<?php the_permalink(); ?>" class="td-btn td-btn-primary industry-card__link"><?php _e('Read more', 'tdcomm'); ?></a>
                         </div>
