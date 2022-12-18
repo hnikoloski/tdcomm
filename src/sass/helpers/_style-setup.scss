@@ -11,9 +11,12 @@ html {
   @media (min-width: 2559px) {
     font-size: 10px;
   }
-  // @media (max-width: 768px) {
-  //   font-size: calc(100vw / 768 * 10);
-  // }
+  @media (max-width: 768px) {
+    font-size: calc(100vw / 768 * 10);
+  }
+  @media (max-width: 425px) {
+    font-size: calc(100vw / 425 * 10);
+  }
 }
 body {
   font-size: 32rem;

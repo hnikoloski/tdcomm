@@ -19,6 +19,7 @@ body.home {
   .products-section {
     max-width: 127.2rem;
     margin: 0 auto 9.8rem auto;
+
     .section-title {
       margin-bottom: 6.8rem;
     }
@@ -41,6 +42,9 @@ body.home {
       background: #ebf1fb;
       max-width: 100%;
       padding: 9.5rem 28.2rem 8.5rem 28.2rem;
+      @include for-tablet {
+        padding: 5.9rem 1.5rem;
+      }
       .section-title {
         flex: 0 0 100%;
         width: 100%;
@@ -49,14 +53,24 @@ body.home {
         flex: 0 0 40rem;
         width: 40rem;
         max-width: 40rem;
+        @include for-tablet {
+          flex: 0 0 100%;
+          width: 100%;
+          max-width: 100%;
+          justify-content: center;
+          margin-bottom: 3.7rem;
+        }
         .single-product {
           display: flex;
           align-items: center;
           align-content: center;
           flex-wrap: wrap;
-          flex: 0 0 100%;
-          max-width: 100%;
-          width: 100%;
+          flex: 0 0 auto;
+          max-width: auto;
+          width: auto;
+          border: 0.3rem solid $accent;
+          @include borderRadius(5rem);
+          padding-right: 3.3rem;
           &:not(:last-of-type) {
             margin-bottom: 5.5rem;
           }
@@ -69,7 +83,7 @@ body.home {
             height: 8.3rem;
             flex: 0 0 8.3rem;
             @include borderRadius(50%);
-            background: #2b478b;
+            // background: #2b478b;
             padding: 1.3rem;
             position: relative;
             z-index: 1;
@@ -79,13 +93,14 @@ body.home {
           }
           .product-title {
             line-height: 1;
-            background: $accent;
-            padding: 2.6rem 3.6rem;
-            @include borderRadius(0px 0.5rem 6rem 0px);
-            font-size: 2.2rem;
-            color: #fff;
-            margin-left: -2.8rem;
-            width: calc(100% - 8.3rem);
+            // background: $accent;
+            // padding: 2.6rem 3.6rem;
+            // @include borderRadius(0px 0.5rem 6rem 0px);
+            // margin-left: -2.8rem;
+            // width: calc(100% - 8.3rem);
+            font-size: 2rem;
+            font-weight: 600;
+            color: $accent;
           }
         }
       }
@@ -93,6 +108,10 @@ body.home {
         flex: 0 0 72.7rem;
         max-width: 72.7rem;
         width: 72.7rem;
+        @include for-tablet {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
         img {
           @include fullSizeImg(contain);
         }
@@ -113,6 +132,9 @@ body.home {
         margin-bottom: 10rem;
         .swiper-slide {
           padding: 0 33.8rem;
+          @include for-tablet {
+            padding: 0 2.5rem;
+          }
         }
       }
       .swiper-pagination {

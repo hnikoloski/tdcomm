@@ -18,7 +18,7 @@
                     setup_postdata($post); ?>
                     <div class="swiper-slide single-industry industry-card">
                         <div class="industry-card__image-wrapper">
-                            <img src="<?= get_the_post_thumbnail_url($post->ID, 'medium'); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?= get_the_post_thumbnail_url($post->ID, 'full'); ?>" alt="<?php the_title(); ?>">
                         </div>
                         <div class="industry-card__content-wrapper">
                             <h4 class="industry-card__title"><?php the_title(); ?></h4>

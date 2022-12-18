@@ -7,6 +7,11 @@
     width: var(--colWidth);
     padding-right: 2.2rem;
     margin-bottom: 2.6rem;
+    @include for-tablet {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+    }
     &-inner {
       display: flex;
       align-items: center;

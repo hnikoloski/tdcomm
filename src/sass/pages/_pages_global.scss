@@ -3,11 +3,17 @@ main {
     padding: 8.5rem 32.4rem;
     position: relative;
     overflow: hidden;
+    @include for-tablet {
+      padding: 9rem 3.5rem;
+    }
     &::before,
     &::after {
       content: "";
       position: absolute;
       pointer-events: none;
+      @include for-tablet {
+        display: none;
+      }
     }
     &::before {
       bottom: var(--leftSideDecoBottom);

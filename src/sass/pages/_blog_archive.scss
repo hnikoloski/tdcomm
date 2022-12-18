@@ -11,6 +11,12 @@
       width: 46.8rem;
       height: inherit;
       align-self: stretch;
+      @include for-tablet {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 5.5rem;
+      }
       &:hover {
         .blog-card__image {
           img {

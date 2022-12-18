@@ -31,6 +31,8 @@ jQuery(document).ready(function ($) {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+
+
         });
     }
 
@@ -46,6 +48,17 @@ jQuery(document).ready(function ($) {
             loop: true,
             loopedSlides: 2,
             spaceBetween: convertPxToRem(30),
+            breakpoints: {
+                320: {
+                    slidesPerView: '1.5',
+                    spaceBetween: convertPxToRem(30),
+                },
+                768: {
+                    slidesPerView: '3.5',
+                    spaceBetween: convertPxToRem(30),
+                },
+
+            },
         });
     }
 

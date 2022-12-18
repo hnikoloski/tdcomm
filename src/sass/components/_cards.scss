@@ -18,11 +18,19 @@
 .industry-card {
   display: flex;
   height: auto;
+  @include for-tablet {
+    display: block;
+  }
   &__image-wrapper {
     flex: 0 0 63.3rem;
     width: 63.3rem;
     overflow: hidden;
     @include borderRadius(3rem); // height: 100%;
+    @include for-tablet {
+      width: 100%;
+      height: 33rem;
+      margin-bottom: 6rem;
+    }
     img {
       display: block;
       @include fullSizeImg(cover);
@@ -36,12 +44,19 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    @include for-tablet {
+      width: 100%;
+      padding: 0;
+    }
   }
   &__title {
     font-size: 2.2rem;
     line-height: 1.09;
     // margin-bottom: 7.9rem;
-    color: #000;
+    color: $primary;
+    @include for-tablet {
+      margin-bottom: 4.9rem;
+    }
   }
   &__excerpt {
     font-size: 1.8rem;
@@ -49,6 +64,9 @@
     // margin-bottom: auto;
     padding-left: 2.5rem;
     position: relative;
+    @include for-tablet {
+      margin-bottom: 6rem;
+    }
     &::before {
       content: "";
       position: absolute;

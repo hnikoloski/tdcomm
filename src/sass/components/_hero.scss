@@ -3,6 +3,9 @@
     border-bottom-right-radius: 50rem;
     overflow: hidden;
     min-height: 73.7rem;
+    @include for-tablet {
+      border-bottom-right-radius: 10rem;
+    }
     .swiper {
       height: 100%;
       &-wrapper {
@@ -17,6 +20,9 @@
         align-items: center;
         align-content: center;
         flex-wrap: wrap;
+        @include for-tablet {
+          padding: 0 3.8rem;
+        }
         &::before {
           content: "";
           position: absolute;
@@ -32,7 +38,9 @@
           position: relative;
           z-index: 1;
           height: 100%;
-
+          @include for-tablet {
+            width: 100%;
+          }
           h2 {
             color: #fff;
             font-size: 4.8rem;
@@ -68,6 +76,15 @@
     @include borderRadius(0px 0px 20rem 0px);
     overflow: hidden;
     min-height: 37.6rem;
+    @include for-tablet {
+      border-bottom-right-radius: 10rem;
+      padding: 0 3.8rem;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -87,6 +104,9 @@
         font-size: 4.8rem;
         font-weight: 600;
         line-height: 0.7;
+        @include for-tablet {
+          line-height: 1.1;
+        }
       }
       p {
         margin-top: 1rem;

@@ -8,13 +8,26 @@ footer.site-footer {
     .col {
       flex: 0 0 auto;
       max-width: 25%;
+      @include for-tablet {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 3.5rem;
+        text-align: center;
+      }
       .logo-wrapper {
         width: 17.7rem;
         height: 4rem;
         margin-top: 2.2rem;
+        @include for-tablet {
+          width: 100%;
+        }
       }
       &:not(:last-of-type) {
         margin-right: 10rem;
+        @include for-tablet {
+          margin-right: 0;
+        }
       }
       .col-label {
         margin-bottom: 3.5rem;
@@ -46,6 +59,9 @@ footer.site-footer {
             &.large-label {
               &:not(:last-of-type) {
                 margin-bottom: 3.5rem;
+                @include for-tablet {
+                  margin-bottom: 1.5rem;
+                }
               }
               a {
                 font-size: 1.8rem;
@@ -79,8 +95,18 @@ footer.site-footer {
         display: flex;
         flex-wrap: wrap;
         max-width: 26rem;
+        @include for-tablet {
+          max-width: 100%;
+          justify-content: center;
+        }
         li {
           margin: 0 1.7rem 1.1rem 0;
+          @include for-tablet {
+            margin: 0 1.7rem 1.1rem 0;
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
           a {
             display: block;
             width: 4.75rem;

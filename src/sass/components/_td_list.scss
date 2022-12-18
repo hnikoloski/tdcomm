@@ -1,6 +1,9 @@
 .tdcomm-list-block {
   padding-left: 2.6rem;
   position: relative;
+  @include for-tablet {
+    padding-left: 1rem;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -16,5 +19,8 @@
     margin-bottom: 1.5rem;
     font-family: $hebo;
     font-weight: 500;
+    @include for-tablet {
+      padding-left: 1rem;
+    }
   }
 }
